@@ -1,6 +1,6 @@
 import imageRickMorty from './img/rick-morty.png';
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Characters from './components/Characters';
 
 function App() {
@@ -24,7 +24,7 @@ const reqApi= async()=>{
           ):(  
           <>
           <img src={imageRickMorty} alt="Rick & Morty" className="img-home"/>
-        <button onClick={reqApi} className='btn-search'>Buscar Personajes</button>
+        <button onClick={reqApi} className='btn-search'>Buscar Personajes</button> {/* al hacer click en el boton hace el req  */}
           </>
            )}
       </header>
